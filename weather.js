@@ -13,9 +13,8 @@ app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/data", function (req, res) {
-  const query = req.body.cityName;
-  console.log(query);
+app.get("/data", function (req, res) {
+  const query = req.headers.cityname;
   const apiKey = "739e0bae73dd35447089356bf29cabd8";
   const unit = "metric";
   const url =
